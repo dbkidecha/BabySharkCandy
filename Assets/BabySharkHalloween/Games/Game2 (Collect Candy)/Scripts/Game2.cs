@@ -75,7 +75,7 @@ public class Game2 : MonoBehaviour
         if (shark.transform.localPosition.y < 400)
         {
             shark.gravityScale = 0.8f;
-            shark.velocity = Vector2.zero;
+            shark.linearVelocity = Vector2.zero;
             shark.AddForce(Vector2.up * 200);
             SoundManager.instance.PlaySound(1);
         }
