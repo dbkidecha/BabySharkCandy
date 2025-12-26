@@ -32,8 +32,8 @@ public static class Container
         {
             PlayerPrefs.SetInt("noAds", value);
 
-            if (value.Equals(1) && AdsManager.instance != null)
-                AdsManager.instance.DestroyBannerView();
+            //if (value.Equals(1) && AdsManager.instance != null)
+            //    AdsManager.instance.DestroyBannerView();
         }
     }
 

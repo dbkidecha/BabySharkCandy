@@ -8,6 +8,7 @@ public class AdsManager : MonoBehaviour
 {
     public static AdsManager instance;
 
+    private string appID = "ca-app-pub-6726295314865277~4384476569";
     private string appOpenUnit = "ca-app-pub-3940256099942544/9257395921";
     private string bannerUnit = "ca-app-pub-6726295314865277/3598008504";
     private string interstitialUnit = "ca-app-pub-6726295314865277/3547835798";
@@ -19,6 +20,8 @@ public class AdsManager : MonoBehaviour
     private BannerView _bannerView;
     private InterstitialAd _interstitialAd;
     private RewardedAd _rewardedAd;
+
+    public bool testAds = false;
 
     public bool IsAdAvailable
     {
@@ -59,6 +62,15 @@ public class AdsManager : MonoBehaviour
         interstitialUnit = "ca-app-pub-6726295314865277/9597906659";
         rewardedUnit = "ca-app-pub-3940256099942544/1712485313";
 #endif
+
+        if (testAds)
+        {
+            appID = "ca-app-pub-3940256099942544~3347511713";
+            appOpenUnit = "ca-app-pub-3940256099942544/9257395921";
+            bannerUnit = "ca-app-pub-3940256099942544/6300978111";
+            interstitialUnit = "ca-app-pub-3940256099942544/1033173712";
+            rewardedUnit = "ca-app-pub-3940256099942544/5224354917";
+        }
 
         RequestConfiguration requestConfiguration = new RequestConfiguration
         {
@@ -224,7 +236,7 @@ public class AdsManager : MonoBehaviour
         _bannerView.OnBannerAdLoaded += () =>
         {
             Debug.Log("Banner view loaded an ad with response : "
-                + _bannerView.GetResponseInfo());            
+                + _bannerView.GetResponseInfo());
         };
         // Raised when an ad fails to load into the banner view.
         _bannerView.OnBannerAdLoadFailed += (LoadAdError error) =>
@@ -376,7 +388,7 @@ public class AdsManager : MonoBehaviour
     }
 
     public void ShowInterstitialAd()
-    {        
+    {
         if (Container.noAds.Equals(1))
             return;
 

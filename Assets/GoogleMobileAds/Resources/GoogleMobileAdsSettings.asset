@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: GoogleMobileAdsSettings
   m_EditorClassIdentifier: 
   adMobAndroidAppId: ca-app-pub-6726295314865277~4384476569
-  adMobIOSAppId: ca-app-pub-6726295314865277~4939604206
+  adMobIOSAppId: 
   enableKotlinXCoroutinesPackagingOption: 1
-  optimizeInitialization: 1
-  optimizeAdLoading: 1
+  enableGradleBuildPreProcessor: 1
+  disableOptimizeInitialization: 0
+  disableOptimizeAdLoading: 0
   userTrackingUsageDescription: 
-  validateGradleDependencies: 0
+  userLanguage: en

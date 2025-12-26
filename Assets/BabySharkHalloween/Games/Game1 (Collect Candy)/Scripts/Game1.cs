@@ -66,7 +66,7 @@ public class Game1 : MonoBehaviour
 
         StartCoroutine(ShowBubbles());
 
-        AdsManager.instance.ChangeBannerView(GoogleMobileAds.Api.AdPosition.Top);
+        //AdsManager.instance.ChangeBannerView(GoogleMobileAds.Api.AdPosition.Top);
     }
 
     private IEnumerator ShowBubbles()

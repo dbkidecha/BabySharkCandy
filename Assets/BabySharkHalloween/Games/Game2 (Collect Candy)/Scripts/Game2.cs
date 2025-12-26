@@ -53,7 +53,7 @@ public class Game2 : MonoBehaviour
         introPanel.SetActive(true);
         StartCoroutine(ShowBubbles());
 
-        AdsManager.instance.ChangeBannerView(GoogleMobileAds.Api.AdPosition.Top);
+        //AdsManager.instance.ChangeBannerView(GoogleMobileAds.Api.AdPosition.Top);
     }
 
     private IEnumerator ShowBubbles()

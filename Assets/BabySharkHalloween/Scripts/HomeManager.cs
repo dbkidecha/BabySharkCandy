@@ -32,7 +32,7 @@ public class HomeManager : MonoBehaviour
         CheckMusic();
 
         AdsManager.instance.ShowBannerView();
-        AdsManager.instance.ChangeBannerView(GoogleMobileAds.Api.AdPosition.Bottom);
+        //AdsManager.instance.ChangeBannerView(GoogleMobileAds.Api.AdPosition.Bottom);
 
         if (Container.rateCount >= 3 && !Container.rated)
             Invoke(nameof(ShowRateUs), 1f);
